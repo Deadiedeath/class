@@ -43,7 +43,8 @@
     		out.println("접속시간 : "+CT);
     		
     	%>
-    	<a href="product.jsp">이동</a>
+    	<a href="product.jsp" class="btn btn-secondary">이동</a>
+    	<a href="addProduct.jsp" class="btn btn-secondary">상품등록</a>
     	<hr> 
     	</div>
     </div>

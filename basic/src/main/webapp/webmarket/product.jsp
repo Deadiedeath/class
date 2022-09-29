@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
    <%@ page import = "java.util.ArrayList" %>
    <%@ page import = "dto.product" %>
-   <jsp:useBean id="dao" class="dao.productrepository" scope="session" />
+   <%@ page import ="dao.productrepository" %>
    
    
 <!DOCTYPE html>
@@ -22,6 +22,7 @@
  		</div>
  	</div>
     <%
+    	productrepository dao = productrepository.getInstance();
     	ArrayList<product> productlist = dao.getAllProduct();
     %>
     <div class ="container">

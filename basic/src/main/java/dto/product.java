@@ -1,6 +1,8 @@
 package dto;
-
+import java.io.Serializable;
 public class product {
+	private static final long serialVersionUid=1L;
+	
 	private String productId;
 	private String pname;
 	private Integer unitPrice;
