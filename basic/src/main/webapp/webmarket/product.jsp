@@ -11,6 +11,7 @@
 <meta charset="UTF-8">
 <title>상품 목록</title>
 <link rel="stylesheet"   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet"   href=".resources/css/bootstrap.min.css">
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
@@ -32,6 +33,8 @@
     		product p = productlist.get(i);    	
     	%>
     	<div class = "col-md-4">
+    		<img src = "./resources/images/<%=p.getFilename() %>" style="width:30%">
+    		<%=p.getFilename() %>
     		<h3><%=p.getPname() %></h3>
     		<p><%=p.getDescription() %> </p>
     		<p><%=p.getUnitPrice() %> </p>

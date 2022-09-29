@@ -19,6 +19,7 @@ public class productrepository {
 		phone.setCondition("빤짝빤짝퉁");
 		phone.setManufacturer("사과");
 		phone.setUnitInstock(1);
+		phone.setFilename("KakaoTalk_20220929_173604023.png");
 		
 		product notebook = new product("p1235", "맥북", 1500);
 		notebook.setDescription("맥북이다");
@@ -26,6 +27,7 @@ public class productrepository {
 		notebook.setCondition("신풍");
 		notebook.setManufacturer("사과");
 		notebook.setUnitInstock(1);
+		notebook.setFilename("KakaoTalk_20220929_173604133.png");
 		
 		product tablet = new product("p1231", "사과패드", 1000);
 		tablet.setDescription("아이폰 믿고 써라");
@@ -33,6 +35,7 @@ public class productrepository {
 		tablet.setCondition("빤짝빤짝퉁");
 		tablet.setManufacturer("사과");
 		tablet.setUnitInstock(1);
+		tablet.setFilename("KakaoTalk_20220929_173604273.png");
 		
 		list.add(phone);
 		list.add(notebook);

@@ -11,7 +11,17 @@ public class product {
 	private String category;
 	private long unitInstock;
 	private String condition;
+	private String filename;
 	
+	
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
 	public product() {
 		super();
 	}

@@ -2,10 +2,21 @@
     pageEncoding="UTF-8"%>
     <%@ page import = "dto.product" %>
     <%@ page import = "dao.productrepository" %>
+      <%@ page import = "com.oreilly.servlet.*" %>
+    <%@ page import = "com.oreilly.servlet.multipart.*" %>
+    <%@ page import= "java.util.* " %>
+    <%@ page import = "java.io.*" %>
 
     <%
     request.setCharacterEncoding("UTF-8");
     
+    	String filename ="";
+    	String realfolder = "C:\\upload";
+    	String encType="UTF-8";
+    	int maxSize = 5*1024*1024; //최대 5MB
+    
+    	MultipartRequest multi = new MultipartRequest(request, realfolder, maxSize, encType, new DefaultFileRenamePolicy());
+    	
 	 String productId = request.getParameter("productId");
 	 String pname = request.getParameter("name");
 	 String unitPrice = request.getParameter("unitPrice");
@@ -32,6 +43,7 @@
 	newProduct.setPname(pname);
 	newProduct.setUnitInstock(stock);
 	newProduct.setUnitPrice(price);
+	newProduct.setFilename(filename);
 	
     
 	productrepository dao = productrepository.getInstance();
