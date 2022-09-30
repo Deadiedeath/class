@@ -11,7 +11,7 @@
     request.setCharacterEncoding("UTF-8");
     
     	String filename ="";
-    	String realfolder = "C:\\upload";
+    	String realfolder = "C:\\Users\\ict05-24\\git\\repository\\basic\\src\\main\\webapp\\webmarket\\resources\\images";
     	String encType="UTF-8";
     	int maxSize = 5*1024*1024; //최대 5MB
     
@@ -27,6 +27,8 @@
 	 String condition = request.getParameter("condition");
 	 Integer price =0;
 	 
+	 
+	 
 	 if(unitPrice.isEmpty()) price=0;
 	 else price = Integer.valueOf(unitPrice);
 	 
@@ -35,6 +37,7 @@
 	 else stock = Long.valueOf(unitInstock);
 	 
 	 product newProduct = new product();
+	 
 	newProduct.setProductId(productId);
 	newProduct.setCategory(category);
 	newProduct.setCondition(condition);
