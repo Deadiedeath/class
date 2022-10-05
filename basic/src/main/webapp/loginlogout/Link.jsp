@@ -11,7 +11,7 @@
         <% } %>
            
             &nbsp;&nbsp;&nbsp; 
-            <a href="#">게시판(페이징X)</a>
+            <a href="List.jsp">게시판(페이징X)</a>
             &nbsp;&nbsp;&nbsp; 
             <a href="#">게시판(페이징O)</a>
         </td>

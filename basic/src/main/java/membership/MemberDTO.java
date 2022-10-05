@@ -1,10 +1,14 @@
 package membership;
 
 public class MemberDTO {
-	private String id;
-	private String pwd;
-	private String userName;
+// DTO : Data transfer Object (데이타 트랜스포 오브젝트)
+//   	 데이터를 교환하기 위해 생성하는 객체
 	
+	
+	private String id;
+	private String pass;
+	private String name;
+	private String regidate;
 	
 	public String getId() {
 		return id;
@@ -12,17 +16,23 @@ public class MemberDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPwd() {
-		return pwd;
+	public String getPass() {
+		return pass;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getRegidate() {
+		return regidate;
+	}
+	public void setRegidate(String regidate) {
+		this.regidate = regidate;
 	}
 	
 	
