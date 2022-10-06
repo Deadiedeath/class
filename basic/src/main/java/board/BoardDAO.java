@@ -146,4 +146,47 @@ public class BoardDAO extends  JDBConnect{
 		
 		return dto;
 	}
+	
+	
+	public int updateEdit(boardDTO dto) {
+		int result = 0;
+		
+		try {
+			String query = "update board set " + "title=?, content=? " + "where num=?";
+			
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, dto.getTitle());
+			psmt.setString(2, dto.getContent());
+			psmt.setString(3, dto.getNum());
+			result = psmt.executeUpdate();
+		} catch (Exception e) {
+			System.out.println("수정중 오류 발생");
+			e.printStackTrace();
+		}
+		
+		
+		return result;
+	}
+	
+	public int deletePost(boardDTO dto) {
+		int result = 0;
+		
+		try {
+			String query = "delete from board " + "where num=?";
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, dto.getNum());
+			result = psmt.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			System.out.println("게시물 삭제중 오류 발생");
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return result;
+	}
+	
 }

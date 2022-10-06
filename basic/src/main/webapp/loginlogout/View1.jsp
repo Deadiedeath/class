@@ -27,7 +27,7 @@ function deletePost() {
     if (confirmed) {
         var form = document.writeFrm;       // 이름(name)이 "writeFrm"인 폼 선택
         form.method = "post";               // 전송 방식 
-        form.action = "DeleteProcess.jsp";  // 전송 경로
+        form.action = "DeleteProcess.jsp?num=<%=dt.getNum()%>";  // 전송 경로
         form.submit();                      // 폼값 전송
     }
 }
@@ -63,13 +63,17 @@ function deletePost() {
         </tr>
         <tr>
             <td colspan="4" align="center">
-           
+                       <%
+            if (session.getAttribute("UserId")!=null && 
+            session.getAttribute("UserId").toString().equals(dt.getId())){                  
+               
+            %>
                 <button type="button"
-                        onclick="location.href='Edit.jsp?num=';">
+                        onclick="location.href='Edit.jsp?num=<%=dt.getNum()%>';">
                     수정하기</button>
                 <button type="button" onclick="deletePost();">삭제하기</button> 
             <%
-            
+            }
             %>
                 <button type="button" onclick="location.href='List.jsp';">
                     목록 보기
