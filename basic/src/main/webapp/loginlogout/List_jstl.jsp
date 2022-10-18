@@ -76,14 +76,17 @@ if(searchWord !=null){
 <% 
 }else {
 	//게시물이 있을 경우
-	int virtualNum = 0; //화면상의 게시물 번호
-	for(boardDTO dto:boardLists){
-		virtualNum = totalCount--;  //전체 게시물 수에서 시작하여 1씩 감소%>
+	int virtualNum = 0; //화면상의 게시물 번호%>
+	<c:set var = "boardLists" value = "<%=boardLists %>" />
+	<c:forEach var = "dto" items = "${boardLists }" />
+	<!--  	for(boardDTO dto:boardLists){ -->
+	<c:set var = "virtualNum" value = "totalCont--" />
+	<!--  	virtualNum = totalCount--;  //전체 게시물 수에서 시작하여 1씩 감소-->
 	
         <tr align="center">
-            <td><%=virtualNum %></td>  <!--게시물 번호-->
+            <td>${virtualNum }</td>  <!--게시물 번호-->
             <td align="left">  <!--제목(+ 하이퍼링크)-->
-                <a href="View1.jsp?num=<%=dto.getNum()%>"><%=dto.getTitle() %></a> 
+                <a href="View1.jsp?num=${dto.getNum() }"><${dto.getTitle}</a> 
             </td>
             <td align="center"><%=dto.getId() %></td>          <!--작성자 아이디-->
             <td align="center"><%=dto.getVisitcount() %></td>  <!--조회수-->
